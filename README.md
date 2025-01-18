@@ -28,7 +28,7 @@ Klassi is a decentralized platform that allows users to pay for Solana transacti
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/klassi.git
+   git clone https://github.com/hashmad/klassi.git
    cd klassi
    ```
 
