@@ -1,29 +1,83 @@
-# Create T3 App
+# Klassi
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Klassi is a decentralized platform that allows users to pay for Solana transaction fees by watching ads. Advertisers stake SOL to showcase their ads, and the gas fees for users' transactions are sponsored using this staked SOL. This project leverages the T3 stack for a modern and scalable solution.
 
-## What's next? How do I make an app with this?
+## Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+### For Users
+- Submit Solana draft transactions (base64 string or URL).
+- Watch 2 ads (60 seconds each) with anti-tab-switch and completion tracking mechanisms.
+- Get gas fees sponsored by ad providers for seamless Solana transactions.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+### For Advertisers
+- Create and manage ad accounts via a dedicated dashboard.
+- Stake SOL to increase ad visibility and ranking.
+- Create ad sets (videos with metadata like duration).
+- Track staking balances and ad performance.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+---
 
-## Learn More
+## Installation
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+### Prerequisites
+- **Node.js**: Install the latest version.
+- **pnpm**: Install via `npm install -g pnpm`.
+- **Solana CLI**: Set up the Solana development environment ([guide](https://docs.solana.com/cli/install-solana-cli-tools)).
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+### Setup
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/klassi.git
+   cd klassi
+   ```
 
-## How do I deploy this?
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+3. Set up environment variables:
+   - Create a `.env` file in the root directory.
+   - Add the following variables:
+     ```env
+     DATABASE_URL="postgresql://<username>:<password>@<host>:<port>/<database>"
+     NEXTAUTH_SECRET="<your-nextauth-secret>"
+     NEXTAUTH_URL="http://localhost:3000"
+     ```
+
+4. Run the development server:
+   ```bash
+   pnpm dev
+   ```
+
+5. Start the Solana program (Devnet):
+   - Deploy your Anchor program by following the [Anchor deployment guide](https://book.anchor-lang.com/).
+
+---
+
+## Contributing
+
+We welcome contributions from the community! To contribute:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Submit a pull request with a detailed description.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- Built with love using the T3 stack.
+- Powered by Solana's high-performance blockchain.
+
+---
+
+## Contact
+
+For questions or feedback, reach out to [hashmad.xyz@gmail.com](mailto:hashmad.xyz@gmail.com).
